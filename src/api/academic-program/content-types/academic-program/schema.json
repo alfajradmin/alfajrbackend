@@ -19,19 +19,10 @@
       "type": "uid",
       "targetField": "title"
     },
-    "description": {
-      "type": "richtext"
-    },
-    "rules_and_regulations": {
-      "type": "richtext"
-    },
     "faqs": {
       "type": "component",
       "repeatable": true,
       "component": "shared.faq"
-    },
-    "fee_structure": {
-      "type": "richtext"
     },
     "downloads": {
       "type": "media",
@@ -49,6 +40,33 @@
     },
     "rank": {
       "type": "integer"
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "fee_structure": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
